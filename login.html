@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Login</title>
+    <style>
+        :root {
+            --primary-color: #ff5722;
+            --secondary-color: #0d47a1;
+            --text-dark: #333;
+            --text-light: #6b6b6b;
+            --background-color: #f0f4f8;
+            --white: #ffffff;
+            --gradient: linear-gradient(to bottom right, #ff5722, #ff9800);
+        }
+
+        html,
+        body {
+            scroll-behavior: smooth;
+        }
+
+      
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .back-button img {
+            width: 125px;
+            height: 125px;
+            cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 300px;
+            margin-top: 8%;
+
+        }
+
+        .image-container {
+            width: 374px;
+            height: 524px;
+            background: var(--gradient);
+
+
+        }
+
+        .image-container img {
+            margin-left: -150px;
+            color: white;
+            animation-name: Anime;
+            animation-duration: 2s;
+        }
+
+        .login-container {
+            background-color: var(--white);
+            width: 400px;
+            padding: 40px 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            text-align: center;
+            right: 25px;
+            ;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 24px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            font-size: 14px;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 90%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            margin-bottom: 8px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 5px rgba(255, 87, 34, 0.5);
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 6px;
+            color: var(--white);
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e64a19;
+        }
+
+        .forgot-password {
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        .forgot-password a,
+        .signup-link a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-password a:hover,
+        .signup-link a:hover {
+            color: #004ba0;
+        }
+
+        .signup-link {
+            margin-top: 20px;
+        }
+        @keyframes  Anime {
+            from{ margin-left: -500px}
+            to{margin-left:-150px}
+            
+        }
+        .image-container h3{
+            letter-spacing: 0.1rem;
+            line-height: 1rem;
+            color: black;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="Home.html" class="back-button">
+        <img src="back.png" alt="Back">
+    </a>
+    <div class="container">
+        <div class="image-container">
+            <img src="vintage.png" alt="">
+            <h3>Unlock the journey. Log in to rent your dream ride with Rental X.
+                </h3>
+        </div>
+        <div class="login-container">
+            <h2>Login to RentalX</h2>
+            <form action="login.php" method="POST">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <input type="submit" value="Login">
+
+                <div class="forgot-password">
+                    <a href="forgot.html">Forgot Password?</a>
+                </div>
+            </form>
+
+            <div class="signup-link">
+                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
